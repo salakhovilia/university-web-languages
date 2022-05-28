@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#"
+     xml:base="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#accelarator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#accelarator">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Accelarator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#companies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#companies">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#founded_by"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#investors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Investor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#employees -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#employees">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#employer"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CEO"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CTO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#employer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#employer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CEO"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CTO"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#founded_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#founded_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#industry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#industry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Medicine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Robotics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#investors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#investors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Investor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#location -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#dateOfFound -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#dateOfFound">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Accelarator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Accelarator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Accelarator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CEO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CEO">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CTO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CTO">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Industry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Investor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Investor">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Medicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Robotics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Robotics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Industry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Location -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Ben_McCormack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Ben_McCormack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CTO"/>
+        <employer rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google"/>
+        <name>Ben McCormack</name>
+        <foaf:mbox>mcCormack@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Dan_Schulman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Dan_Schulman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CEO"/>
+        <employer rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal"/>
+        <name>Dan Schulman</name>
+        <foaf:mbox>schulman@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT_Industry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT_Industry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Larry_Page -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Larry_Page">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder"/>
+        <companies rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google"/>
+        <name>Larry Page</name>
+        <foaf:mbox>page@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Peter_Thiel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Peter_Thiel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder"/>
+        <companies rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal"/>
+        <name>Peter Thiel</name>
+        <foaf:mbox>thiel@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sergey_Brin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sergey_Brin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Founder"/>
+        <companies rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google"/>
+        <name>Sergey Brin</name>
+        <foaf:mbox>brin@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sri_Shivananda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sri_Shivananda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CTO"/>
+        <employer rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal"/>
+        <name>Sri Shivananda</name>
+        <foaf:mbox>shivananda@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sundar_Pichai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sundar_Pichai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#CEO"/>
+        <employer rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google"/>
+        <name>Sundar Pichai</name>
+        <foaf:mbox>pichai@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#alphabet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#alphabet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Investor"/>
+        <companies rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#f6s -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#f6s">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Accelarator"/>
+        <name>F6S</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <employees rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Ben_McCormack"/>
+        <employees rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sundar_Pichai"/>
+        <founded_by rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Larry_Page"/>
+        <founded_by rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sergey_Brin"/>
+        <industry rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT_Industry"/>
+        <investors rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#alphabet"/>
+        <location rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google_location"/>
+        <dateOfFound rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-08-04T00:00:00</dateOfFound>
+        <description xml:lang="en">Google LLC is an American multinational technology company that focuses on artificial intelligence, search engine, online advertising, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics</description>
+        <name>Google</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google_location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#google_location">
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+        <wgs84_pos:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.38</wgs84_pos:lat>
+        <wgs84_pos:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">122.08</wgs84_pos:long>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Startup"/>
+        <accelarator rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#f6s"/>
+        <employees rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Dan_Schulman"/>
+        <employees rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#Sri_Shivananda"/>
+        <industry rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#IT_Industry"/>
+        <location rdf:resource="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal_location"/>
+        <dateOfFound rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-12-05T00:00:00</dateOfFound>
+        <description>PayPal Holdings, Inc. is an American multinational financial technology company operating an online payments system in the majority of countries that support online money transfers, and serves as an electronic alternative to traditional paper methods such as checks and money orders.</description>
+        <name>PayPal</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal_location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/salakhovilia/ontologies/2022/4/salakhovilia#paypal_location">
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Location"/>
+        <wgs84_pos:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.33</wgs84_pos:lat>
+        <wgs84_pos:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121.88</wgs84_pos:long>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
